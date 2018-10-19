@@ -80,6 +80,11 @@ body
 			text-transform: uppercase
 			display: block
 			position: relative
+			border-bottom: 2px solid transparent
+			transition: all .5s ease-in
+			&:hover, &:focus
+				color: $wooden !important
+				border-bottom: 2px solid $wooden
 			&::before
 				content: '\007E'
 				position: absolute
@@ -98,6 +103,9 @@ body
 		i
 			padding-left: 25px
 			color: $light
+			transition: color .5s ease-in
+			&:hover, &:focus
+				color: red
 
 
 @import "media" // Всегда в конце
