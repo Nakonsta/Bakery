@@ -47,6 +47,7 @@ body
 	line-height: 1.71
 	font-family: $default-font
 	overflow-x: hidden
+	color: $accent
 
 .img-responsive
 	display: block
@@ -60,6 +61,44 @@ body
 	background-color: $accent
 	color: #fff
 
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: rgba($accent, .53)
+	padding: 15px 50px
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 700
+	letter-spacing: 3px
+	border-radius: 3px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color 0.4s ease
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+		outline: none
+	&:hover
+		background-color: rgba($accent, .75)
+	&:active
+		background-color: rgba($accent, .85)
+
+.h2
+	font-family: 'Alegreya', serif
+	font-size: 48px
+	color: $accent
+	font-weight: 700
+	margin-bottom: 10px
+
+.h2__subtitle
+	font-family: 'Alegreya', serif
+	text-transform: uppercase
+	color: $base
+	font-weight: 700
+		
 .first-screen
 	height: 100vh
 	.header
@@ -76,6 +115,8 @@ body
 			width: 100%			
 		.navbar-toggler-icon
 			color: $light !important
+		.navbar-collapse
+			z-index: 10
 		a
 			color: $light !important
 			text-transform: uppercase
@@ -107,6 +148,47 @@ body
 			transition: color .5s ease-in
 			&:hover, &:focus
 				color: $base
+
+.first-screen
+	color: #fff
+	&__wraper
+		justify-content: center
+		align-items: center
+		height: 80%
+	&__content
+		position: relative
+		text-align: center
+	.h1
+		font-family: 'Playfair Display', serif
+		font-size: 92px
+		font-weight: 700
+		text-shadow: 0 1px 1px $shadow
+	.dashed-line
+		padding-top: 60px
+		padding-bottom: 65px
+		filter: drop-shadow(0 1px 1px $shadow)
+	&__annonce
+		font-family: 'proxima', serif
+		font-size: 24px
+		padding-bottom: 65px
+		letter-spacing: 1px
+		text-shadow: 0 1px 1px $shadow
+
+.bun
+	height: 106px
+	&__img
+		position: absolute
+		bottom: -53px
+		background: url(../img/bread.png) 50%
+		background-size: cover
+		height: 106px
+		width: 100%
+		filter: drop-shadow(0 1px 9px rgba($shadow, 0.2))
+
+.cakes
+	&__text
+		font-family: 'proxima', serif
+
 
 
 @import "media" // Всегда в конце

@@ -11,16 +11,44 @@
 @media only screen and (max-width : 992px)
 	.navbar-toggler
 		margin: auto
+	.first-screen
+		&__annonce
+			font-size: 20px
+		.navbar
+			.navbar-collapse
+				position: absolute
+				top: 50px
+				background-image: linear-gradient(to right, $shadow, transparent)
+				a
+					padding: 5px 100px
+			a::before
+				content: ''
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.first-screen
+		.h1
+			font-size: 68px
+		.dashed-line
+			padding-top: 30px
+			padding-bottom: 35px
+		&__annonce
+			font-size: 18px
+			padding: 0 20px 65px
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 576px)
+	.first-screen
+		.h1
+			font-size: 55px
+		.dashed-line
+			padding-top: 20px
+			padding-bottom: 25px
+		&__annonce
+			font-size: 16px
+			padding: 0 30px 65px
 
 
 /* Custom, iPhone Retina */
