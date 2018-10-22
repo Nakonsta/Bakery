@@ -48,6 +48,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $accent
+	letter-spacing: 0.025px
 
 .img-responsive
 	display: block
@@ -91,13 +92,15 @@ body
 	font-size: 48px
 	color: $accent
 	font-weight: 700
-	margin-bottom: 10px
+	margin-bottom: 5px
+	letter-spacing: 0.025px
 
 .h2__subtitle
 	font-family: 'Alegreya', serif
 	text-transform: uppercase
 	color: $base
 	font-weight: 700
+	letter-spacing: 0.1px
 		
 .first-screen
 	height: 100vh
@@ -178,16 +181,91 @@ body
 	height: 106px
 	&__img
 		position: absolute
-		bottom: -53px
+		bottom: -65px
 		background: url(../img/bread.png) 50%
 		background-size: cover
-		height: 106px
+		height: 130px
 		width: 100%
-		filter: drop-shadow(0 1px 9px rgba($shadow, 0.2))
+		filter: drop-shadow(0 1px 9px rgba($shadow, 0.1))
+		z-index: 10
 
 .cakes
+	&__left
+		padding: 105px 60px
 	&__text
 		font-family: 'proxima', serif
+		padding: 40px 0 30px
+		letter-spacing: 0.1px
+	&__chef
+		align-items: center
+		justify-content: center
+		p
+			font-size: 24px
+			letter-spacing: 0.025px
+			padding: 15px 20px
+			border-bottom: 1px solid $wooden
+			border-top: 1px solid $wooden
+		img
+			margin: 0 20px
+			filter: drop-shadow(0 2px 5px rgba($shadow, 0.2))
+	&__photos		
+		position: relative
+		p
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			text-transform: uppercase
+			font-size: 30px
+			letter-spacing: 0.05px
+			color: $wooden
+			text-align: center
+	&__preparing
+		background: url(../img/art.png) no-repeat 50%
+		background-size: 100%
+		min-height: 520px
+		margin: 130px 0 110px
+	.h3
+		font-size: 24px
+		letter-spacing: 0.025px
+		font-weight: 700
+		padding-bottom: 15px
+	&__quote
+		padding: 20px 80px 0
+		font-family: 'Scriptina', serif
+		font-size: 24px
+		color: $base
+		position: relative
+		&::before, &::after
+			content: ',,'
+			font-size: 60px
+			font-family: 'Times New Roman', serif
+			position: absolute
+			display: inline-block
+			color: rgba($accent, .5)
+		&::before
+			transform: rotate(180deg)
+			left: -5px
+			top: -10px
+		&::after
+			transform: scale(1, -1)
+			right: 5px
+			bottom: -70px
+	&__tastes
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		filter: drop-shadow(0 14px 18px rgba($shadow, 0.5))
+	&__cake
+
+.pancakes
+	box-sizing: cover
+	
+	
+
+
+
 
 
 
