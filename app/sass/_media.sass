@@ -4,7 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.pancakes
+		.owl-next
+			right: -285px
 
 
 /* Medium Devices, Desktops */
@@ -28,6 +30,11 @@
 			background-size: contain
 			margin: 20px 0 80px
 
+	.pancakes
+		&__minutes
+			top: -100px
+			right: 10px
+
 
 
 /* Small Devices, Tablets */
@@ -41,7 +48,14 @@
 		&__annonce
 			font-size: 18px
 			padding: 0 20px 65px
-
+	.pancakes
+		&__image
+			min-height: 400px
+		&__minutes
+			top: -150px
+			right: 30px
+		.owl-next
+			right: -415px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
@@ -68,12 +82,27 @@
 			&::after
 				right: -23px
 				bottom: -73px
+	.pancakes
+		.owl-next
+			right: -350px
+		.owl-item img
+			width: 80px !important
+			height: 80px !important
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
+@media only screen and (max-width : 420px)
+	.pancakes
+		.owl-next
+			right: -270px
+
+@media only screen and (max-width : 370px)
+	.pancakes
+		.owl-next
+			right: -230px
+
+
+@media only screen and (max-width : 400px)
 	/**/
-
 
 /*==========  Mobile First  ==========*/
 
