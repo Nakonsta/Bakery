@@ -48,7 +48,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $accent
-	letter-spacing: 0.1px
+	letter-spacing: 0.1em
 
 .img-responsive
 	display: block
@@ -367,9 +367,46 @@ body
 
 .breakfast
 	background-size: cover !important
+	&__prices
+		padding: 85px 100px 90px 150px
 	.h2
 		color: #fff
-
+		&__subtitle
+			color: #c8a593
+	&__item
+		margin-top: 50px
+	&__item:first-of-type
+		margin-top: 65px
+	&__offer
+		font-size: 30px
+		color: #fff
+		font-weight: 700
+		margin-bottom: 0
+	&__desc
+		font-size: 16px
+		color: #c2beba
+		margin-bottom: 0
+	&__price
+		font-size: 36px
+		color: $wooden
+	&__flair
+		background: url(../img/flair_bg.png) no-repeat
+		margin: 85px 10px 90px 10px
+		
+.flair
+	width: 85%
+	&__header
+		justify-content: space-around
+	&__bagel
+		background: url(../img/bagel.png) no-repeat 50%
+		min-height: 60px
+	&>p
+		font-family: 'proxima', serif
+	&__button
+		background-color: transparent
+		color: $base
+		border: 1px solid $base
+		font-size: 18px
 
 
 
