@@ -7,6 +7,22 @@
 	.pancakes
 		.owl-next
 			right: -285px
+	.breakfast
+		&__flair
+			background-size: cover
+		&__prices
+			padding: 100px 50px 60px 50px
+
+	.flair
+		&__h3
+			padding: 40px 0 35px
+			font-size: 36px
+	.wheat
+		position: absolute
+		width: 260px
+		height: 165px
+		bottom: 30px
+		right: 0
 
 
 /* Medium Devices, Desktops */
@@ -35,6 +51,20 @@
 			top: -100px
 			right: 10px
 
+	.breakfast
+		&__prices
+			padding: 100px 30px 60px 0
+		&__flair
+			margin: 105px 0 90px
+			background-image: none
+			background-color: #f3f1e9
+			outline: 2px dotted #c2beba
+			outline-offset: -10px
+			padding: 55px 30px 65px
+		&__item
+			margin-top: 20px
+		&__item:first-of-type
+			margin-top: 30px
 
 
 /* Small Devices, Tablets */
@@ -55,7 +85,18 @@
 			top: -150px
 			right: 30px
 		.owl-next
+			right: -285px
+	.breakfast
+		&__prices
+			padding-right: 0
+
+		
+
+@media only screen and (max-width : 765px)
+	.pancakes
+		.owl-next
 			right: -415px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
@@ -88,6 +129,11 @@
 		.owl-item img
 			width: 80px !important
 			height: 80px !important
+
+	.flair
+		&__h3
+			padding: 50px 0 35px
+			font-size: 28px
 
 
 @media only screen and (max-width : 420px)
