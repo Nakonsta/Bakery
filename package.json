@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "bower": "^1.8.4",
-    "jquery.rateit": "^1.1.1"
+    "jquery.rateit": "^1.1.1",
+    "slider-pro": "^1.5.0"
   }
 }
