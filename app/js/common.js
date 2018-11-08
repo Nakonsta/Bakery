@@ -21,7 +21,7 @@ $(function() {
 
     $( '#my-slider' ).sliderPro({
         width: 844,
-        height: 558,
+        height: 630,
         arrows: true,
         buttons: false,
         waitForLayers: true,
@@ -30,9 +30,35 @@ $(function() {
         orientation: 'vertical',
         thumbnailsPosition: 'right',
         thumbnailWidth: 200,
-        thumbnailHeight: 186,
+        thumbnailHeight: 210,
         thumbnailPointer: true,
-        autoScaleLayers: false
+        autoScaleLayers: false,
+        breakpoints: {
+        1200: {
+            thumbnailsPosition: 'bottom',
+            orientation: 'horizontal',
+            thumbnailWidth: 270,
+            thumbnailHeight: 140
+        },
+        992: {
+            thumbnailsPosition: 'bottom',
+            orientation: 'horizontal',
+            thumbnailWidth: 270,
+            thumbnailHeight: 140
+        },
+        768: {
+            thumbnailsPosition: 'bottom',
+            orientation: 'horizontal',
+            thumbnailWidth: 200,
+            thumbnailHeight: 120
+        },
+        576: {
+            thumbnailsPosition: 'bottom',
+            orientation: 'horizontal',
+            thumbnailWidth: 180,
+            thumbnailHeight: 110
+        }
+    }
     });
 
 
