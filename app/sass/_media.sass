@@ -21,8 +21,11 @@
 		position: absolute
 		width: 260px
 		height: 165px
-		bottom: 30px
+		bottom: 0
 		right: 0
+	.footer
+		.footer__nav1 .nav-item:last-child::before, .footer__nav3 .nav-item:nth-child(2)::before, .footer__nav3 .nav-item:last-child::before
+				left: -70%
 
 
 /* Medium Devices, Desktops */
@@ -36,9 +39,11 @@
 			.navbar-collapse
 				position: absolute
 				top: 50px
-				background-image: linear-gradient(to right, $shadow, transparent)
-				a
-					padding: 5px 100px
+				background-image: linear-gradient(to right, $shadow, rgba($shadow, .5))
+				margin-left: -100px
+				.nav-link
+					padding: 15px 200px 15px 100px
+
 			a::before
 				content: ''
 	.cakes
@@ -78,6 +83,23 @@
 			margin: 20px auto
 		&__text
 			width: 150px
+	.footer
+		text-align: center
+		.navbar-nav
+			flex-direction: column			
+		.footer__nav1, .footer__nav3
+			flex-direction: column
+		.footer__nav1, .footer__nav2, .footer__nav3
+			margin: 0 auto
+		.footer__nav1
+			border-bottom: none
+		.footer__nav3
+			border-top: none
+		.logo
+			font-weight: 700
+		.nav-link
+			&:hover, &:focus
+				border-bottom: 1px solid rgba($accent, 0.35)
 
 
 /* Small Devices, Tablets */
@@ -115,12 +137,12 @@
 @media only screen and (max-width : 576px)
 	.first-screen
 		.h1
-			font-size: 55px
+			font-size: 30px
 		.dashed-line
 			padding-top: 20px
 			padding-bottom: 25px
 		&__annonce
-			font-size: 16px
+			font-size: 14px
 			padding: 0 30px 65px
 
 	.cakes
@@ -137,6 +159,9 @@
 				right: -23px
 				bottom: -73px
 	.pancakes
+		&__card
+			margin-top: 0
+			margin-bottom: 0
 		.owl-next
 			right: -350px
 		.owl-item img
@@ -148,8 +173,13 @@
 			padding: 50px 0 35px
 			font-size: 28px
 	.sandwich
+		&__main
+			flex-direction: column-reverse
+		&__slider
+			margin-top: 40px
 		&__ingridients
 			flex-direction: column
+			padding-right: 0
 		&__text
 			width: auto
 			padding: 0 50px
@@ -163,7 +193,12 @@
 @media only screen and (max-width : 370px)
 	.pancakes
 		.owl-next
-			right: -230px
+			right: -240px
+	.first-screen
+		height: 90vh
+	.bun
+		&__img
+			bottom: -65px
 
 
 @media only screen and (max-width : 400px)

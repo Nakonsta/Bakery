@@ -2,9 +2,6 @@
 @import "libs"
 @import "vars"
 
-
-
-
 *
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
@@ -13,30 +10,6 @@
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
 		box-sizing: border-box
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
 html, body
 	height: 100%
 
@@ -49,6 +22,8 @@ body
 	overflow-x: hidden
 	color: $accent
 	letter-spacing: 0.1em
+	scroll-behavior: smooth
+	background-color: $wooden
 
 .img-responsive
 	display: block
@@ -67,7 +42,7 @@ body
 	border: none
 	color: #fff
 	text-decoration: none
-	background-color: rgba($accent, .53)
+	background-color: rgba($shadow, .53)
 	padding: 15px 50px
 	font-size: 14px
 	text-transform: uppercase
@@ -83,9 +58,9 @@ body
 		color: #fff
 		outline: none
 	&:hover
-		background-color: rgba($accent, .75)
+		background-color: rgba($shadow, .85)
 	&:active
-		background-color: rgba($accent, .85)
+		background-color: rgba($shadow, .95)
 
 .h2
 	font-family: 'Alegreya', serif
@@ -101,46 +76,53 @@ body
 	color: $base
 	font-weight: 700
 	letter-spacing: 0.1em
+
+.navbar
+	padding-top: 15px
+	.navbar-collapse.collapse
+		z-index: 100 	
+
+.navbar-nav
+	justify-content: space-between
+	width: 100%		 
+	.navbar-toggler-icon
+		color: $light !important
+	.navbar-collapse
+		z-index: 10
+	.nav-link
+		color: $light !important
+		text-transform: uppercase
+		display: block
+		position: relative
+		border-bottom: 2px solid transparent
+		transition: all .5s ease-in
+		z-index: 120
+		&:hover, &:focus
+			color: $wooden !important
+			text-decoration: none
+		&::before
+			content: '\007E'
+			position: absolute
+			left: -70%
+			transform: translate(50%)
+	a:first-child
+		&::before
+			content: ''
+
+.logo
+	color: $light
+	font-size: 30px
+	font-family: 'Scriptina', serif
+	transition: color .5s ease-in
+	z-index: 2000
+	&:hover, &:focus
+		color: $wooden
+		text-decoration: none
 		
 .first-screen
 	height: 100vh
 	.header
 		background-color: rgba(#56534c, 0.53)
-	.logo
-		color: $light
-		font-size: 30px
-		font-family: 'Scriptina', serif
-		transition: color .5s ease-in
-	.navbar
-		padding-top: 15px
-		.navbar-nav
-			justify-content: space-between
-			width: 100%			
-		.navbar-toggler-icon
-			color: $light !important
-		.navbar-collapse
-			z-index: 10
-		a
-			color: $light !important
-			text-transform: uppercase
-			display: block
-			position: relative
-			border-bottom: 2px solid transparent
-			transition: all .5s ease-in
-			&:hover, &:focus
-				color: $wooden !important
-				border-bottom: 2px solid $wooden
-			&::before
-				content: '\007E'
-				position: absolute
-				left: -50%
-				transform: translate(50%)
-		a:first-child
-			&::before
-				content: ''
-		a:nth-child(2), a:nth-child(4)	
-			&::before
-				left: -100%
 	.social
 		height: 100%
 		justify-content: flex-end
@@ -154,6 +136,7 @@ body
 
 .first-screen
 	color: #fff
+	position: relative
 	&__wraper
 		justify-content: center
 		align-items: center
@@ -166,6 +149,7 @@ body
 		font-size: 92px
 		font-weight: 700
 		text-shadow: 0 1px 1px $shadow
+		z-index: 1
 	.dashed-line
 		padding-top: 60px
 		padding-bottom: 65px
@@ -188,6 +172,9 @@ body
 		width: 100%
 		filter: drop-shadow(0 1px 9px rgba($shadow, 0.1))
 		z-index: 10
+		&:hover, &:focus
+			filter: sepia(25%) drop-shadow(0 1px 9px rgba($shadow, 0.3))
+
 
 .cakes
 	&__left
@@ -424,7 +411,8 @@ body
 		font-size: 18px
 		padding: 12px 70px
 		line-height: 30px
-		&:hover
+		z-index: 230
+		&:hover, &:focus
 			background-color: lighten($base, 25%)
 			color: $base
 			border: 1px solid lighten($base, 25%)
@@ -432,8 +420,8 @@ body
 	position: absolute
 	width: 346px
 	height: 220px
-	bottom: 30px
-	right: 250px
+	bottom: -250px
+	right: 0
 	z-index: 10
 	background: url(../img/wheat.png) no-repeat
 	overflow-x: hidden
@@ -476,6 +464,36 @@ body
 		line-height: 20px
 	&__slider
 		margin-top: 85px
+
+.footer
+	background-color: #f3f1e9
+	padding-top: 50px
+	padding-bottom: 50px
+	.navbar-nav
+		flex-direction: row
+		a
+			color: $accent !important
+			line-height: 44px
+	.footer__nav1, .footer__nav3
+		justify-content: space-between
+		width: 40%
+		border-top: 1px solid rgba($accent, 0.3)
+		border-bottom: 1px solid rgba($accent, 0.3)
+	.logo
+		color: $accent
+		margin-top: -5px
+	.nav-link
+		transition: all .5s ease
+		&:hover, &:focus
+			color: $accent !important
+			border-bottom: none
+			font-weight: 700
+			&::before
+				font-weight: 400
+	.footer__nav1 .nav-item:last-child::before
+		left: -100%
+	.footer__nav3 .nav-item:last-child::before
+			left: -110%
 
 
 

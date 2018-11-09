@@ -61,6 +61,35 @@ $(function() {
     }
     });
 
+    $(".bun").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".bun").offset().top
+        }, 1000);
+    });
+
+    $(".nav-welcome").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#cakes").offset().top
+        }, 1000);
+    });
+
+    $(".nav-menu").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#pancakes").offset().top
+        }, 1000);
+    });
+
+    $(".nav-rezerv").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#breakfast").offset().top
+        }, 1000);
+    });
+
+    $(".nav-news").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#sandwich").offset().top
+        }, 1000);
+    });
 
     var configFontAwesome = {
      custom: {
